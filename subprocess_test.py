@@ -1,10 +1,13 @@
 import subprocess
+from sys import argv
 
-print subprocess.check_output(["echo", "Hello World!!!"])
+script, branch_1, branch_2 = argv
 
-print subprocess.check_call(["ls"])
+# print subprocess.check_output(["echo", "Hello World!!!"])
 
-def git(*args):
-	return subprocess.check_call(['git'] + list(args))
+# print subprocess.check_call(["ls"])
 
-print git('status')
+# def git(*args):
+# 	return subprocess.check_call(['git'] + list(args))
+
+# print git('status')
