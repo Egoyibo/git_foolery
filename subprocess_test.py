@@ -4,11 +4,11 @@ from sys import argv
 script, branch_1, branch_2 = argv
 
 def git(*args):
-	return subprocess.check_call(['git'] + args)
+	# import pdb; pdb.set_trace()
+	return subprocess.check_output(['git'] + list(args))
 
-args = ('diff,--name-status,%s...%s') %(branch_1, branch_2)
-args_split = args.split(',')
-print git(args_split )
+args = "%s...%s" %(branch_1, branch_2)
+print git("diff", args)
 
 # print subprocess.check_output(["echo", "Hello World!!!"])
 
